@@ -33,6 +33,7 @@
     /**
      * feature detection and helper functions
      */
+    
     var hasMoment = typeof moment === 'function',
 
     hasEventListeners = !!window.addEventListener,

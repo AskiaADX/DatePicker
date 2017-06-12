@@ -155,11 +155,14 @@ var picker{%= CurrentADC.InstanceId %} = new Pikaday(
                 el.parentNode.setAttribute('id', 'picker'+adcIndex);
             }
 		},
-        /*onSelect: function(event) {
-   			var adcIndex = {%= CurrentADC.InstanceId.ToInt() %};
-        	var el = document.getElementsByClassName('pika-lendar')[adcIndex-1];
-    		el.setAttribute('id', 'picker'+adcIndex);
-		},*/
+    	onSelect: function(event) {
+            if (window.askia 
+                && window.arrLiveRoutingShortcut 
+                && window.arrLiveRoutingShortcut.length > 0
+                && window.arrLiveRoutingShortcut.indexOf('{%:= CurrentQuestion.Shortcut %}') >= 0) {
+                askia.triggerAnswer();
+            }
+        },
         onDraw: function(event) {
    			var adcIndex = {%= CurrentADC.InstanceId.ToInt() %};
         	var elms = document.getElementsByClassName('pika-title');
