@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<control  xmlns="http://www.askia.com/2.0.0/ADCSchema"
+<control  xmlns="http://www.askia.com/2.1.0/ADCSchema"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://www.askia.com/2.0.0/ADCSchema https://raw.githubusercontent.com/AskiaADX/ADXSchema/2.0.0/ADCSchema.xsd"
-          version="2.0.0"
-          askiaCompat="5.3.3">
+          xsi:schemaLocation="http://www.askia.com/2.1.0/ADCSchema https://raw.githubusercontent.com/AskiaADX/ADXSchema/2.1.0/ADCSchema.xsd"
+          version="2.1.0"
+          askiaCompat="5.4.2">
   <info>
     <name>DatePicker</name>
     <guid>b6c04b51-32c5-4591-ba77-a500d686e5e3</guid>
@@ -17,7 +17,6 @@
     <categories>
       <category>General</category>
     </categories>
-    <style width="400" height="300" />
     <constraints>
       <constraint on="questions" single="false" multiple="false" numeric="false" date="true" open="false" chapter="false" requireParentLoop="false" />
       <constraint on="controls" responseblock="false" checkbox="false" label="false" listbox="false" radiobutton="false" textbox="true" />
@@ -38,6 +37,15 @@
   </outputs>
   <properties>
     <category id="general" name="General">
+      <property xsi:type="standardProperty" id="controlAlign" name="Control Alignment" type="string" mode="dynamic" require="true" visible="true">
+        <description><![CDATA[The alignment of the control]]]></description>
+        <value><![CDATA[center]]></value>
+        <options>
+          <option value="left" text="Left" />
+          <option value="center" text="Center" />
+          <option value="right" text="Right" />
+        </options>
+      </property>
       <property xsi:type="standardProperty" id="placeholder" name="Placeholder" type="string" mode="dynamic" require="false" visible="false">
         <description><![CDATA[Using HTML 5, in modern browser.
           Helper text shows in the input when it's empty.]]></description>

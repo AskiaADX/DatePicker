@@ -1,3 +1,16 @@
+{%
+Dim controlAlign
+If (CurrentADC.PropValue("controlAlign") = "center" ) Then
+    controlAlign = "0 auto"
+ElseIf (CurrentADC.PropValue("controlAlign") = "right" ) Then
+    controlAlign = "0 0 0 auto"
+Else
+    controlAlign = "0 auto 0 0"
+EndIf
+%}
+#adc_{%= CurrentADC.InstanceId %} {
+    margin: {%= controlAlign %};
+}
 #picker{%= CurrentADC.InstanceId %} .is-today .pika-button {
     color: rgba({%= CurrentADC.PropValue("selectColor") %}) !important;
 }

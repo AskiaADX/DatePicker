@@ -19,11 +19,11 @@ dim minBound = CurrentQuestion.MinDate.Format("yyyy").ToNumber()
 dim maxBound = CurrentQuestion.MaxDate.Format("yyyy").ToNumber()
 
 if CvDkNa(minBound) < 1 Then
-	minBound = 0
+	minBound = 1900
 EndIf
 
 if CvDkNa(maxBound) < 1 Then
-    maxBound = 0
+    maxBound = 2100
 EndIf
 %}
 
