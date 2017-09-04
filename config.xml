@@ -63,17 +63,9 @@
         <description><![CDATA[Background colour of selected date]]></description>
         <value><![CDATA[{%= Theme.SecondaryColor %}]]></value>
       </property>
-      <property xsi:type="standardProperty" id="selectTextColor" name="Selected Text Colour" type="color" mode="dynamic" require="true" visible="false" colorFormat="rgba">
-        <description><![CDATA[Colour of selected date]]></description>
-        <value><![CDATA[{%= Theme.WhiteColor %}]]></value>
-      </property>
       <property xsi:type="standardProperty" id="hoverColor" name="Hover Colour" type="color" mode="dynamic" require="true" visible="false" colorFormat="rgba">
         <description><![CDATA[Background color when date hovered on]]></description>
         <value><![CDATA[{%= Theme.PrimaryColor %}]]></value>
-      </property>
-      <property xsi:type="standardProperty" id="hoverTextColor" name="Hover Text Colour" type="color" mode="dynamic" require="true" visible="false" colorFormat="rgba">
-        <description><![CDATA[Colour when date hovered on]]></description>
-        <value><![CDATA[{%= Theme.WhiteColor %}]]></value>
       </property>
     </category>
     <category id="Date" name="Date options">

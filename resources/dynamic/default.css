@@ -19,9 +19,9 @@ EndIf
 #picker{%= CurrentADC.InstanceId %} .is-startrange .pika-button,
 #picker{%= CurrentADC.InstanceId %} .is-endrange .pika-button {
     background-color: rgba({%= CurrentADC.PropValue("selectColor") %}) !important;
-    color: rgba({%= CurrentADC.PropValue("selectTextColor") %}) !important;
+    color: rgba(255,255,255,1) !important;
 }
 #picker{%= CurrentADC.InstanceId %} .pika-button:hover {
     background-color: rgba({%= CurrentADC.PropValue("hoverColor") %}) !important;
-    color: rgba({%= CurrentADC.PropValue("hoverTextColor") %}) !important;
+    color: rgba(255,255,255,1) !important;
 }
