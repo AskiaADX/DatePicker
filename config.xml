@@ -7,7 +7,7 @@
   <info>
     <name>DatePicker</name>
     <guid>b6c04b51-32c5-4591-ba77-a500d686e5e3</guid>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
     <date>2016-10-28</date>
     <description><![CDATA[V2.0.0 : English only version of the datepicker]]></description>
     <company>Askia</company>
@@ -92,12 +92,12 @@ Format: MM/DD/YYYY]]></description>
           <option value="bottom right" text="bottom right" />
         </options>
       </property>
-      <property xsi:type="standardProperty" id="setDefaultDate" name="Set default date" type="boolean" mode="dynamic" require="false" visible="true">
+      <property xsi:type="standardProperty" id="setDefaultDate" name="Set default date" type="string" mode="dynamic" require="false" visible="true">
         <description><![CDATA[Make the "Default Date" the initial selected value]]></description>
         <value><![CDATA[0]]></value>
         <options>
-          <option value="0" text="No" />
           <option value="1" text="Yes" />
+          <option value="0" text="No" />
         </options>
       </property>
       <property xsi:type="standardProperty" id="firstDay" name="First Day of the month" type="number" mode="dynamic" require="false" visible="true">
