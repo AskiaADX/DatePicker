@@ -4,11 +4,13 @@ Dim placeholder = CurrentADC.PropValue("placeholder")
 Dim attrPlaceholder = On(placeholder <> "", "placeholder=\"" + placeholder + "\"", "")
 Dim attrRequired = On(CurrentQuestion.IsAllowDK, "required=\"required\"", "")
 Dim inputName = CurrentQuestion.InputName()
+Dim showDatePickerText = (CurrentADC.PropValue("showDatePickerText") = "1")
 
 If Not(CurrentQuestion.IsTimeOnly) Then
     Dim attrMin = On(CurrentQuestion.MinDate.ToNumber() <> DK, "min=\"" + CurrentQuestion.MinDate.Format("dd/MM/yyyy") + "\"", "")
     Dim attrMax = On(CurrentQuestion.MaxDate.ToNumber() <> DK, "max=\"" + CurrentQuestion.MaxDate.Format("dd/MM/yyyy") + "\"", "")    
 %}
+    <label for="{%= CurrentQuestion.InputName("date")%}" {%if not(showDatePickerText) then %}hidden{%EndIf%}>{%=CurrentADC.PropValue("datePickerLabelText")%}</label>
 	<input type="text" id="{%= CurrentQuestion.InputName("date") %}" name="{%= CurrentQuestion.InputName("date") %}" value="{%= CurrentQuestion.InputValue("date") %}" {%:= attrMin %} {%:= attrMax %} {%:= attrPlaceholder %} {%:= attrRequired %} readonly="true"/>
 {% EndIf %}
 
