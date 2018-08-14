@@ -10,8 +10,7 @@
     <version>2.0.1</version>
     <date>2016-10-28</date>
     <description><![CDATA[V2.0.0 : English only version of the datepicker
-		v2.0.2 - Add labels for input text
-			   - Add showDatePickerText in Date options category]]></description>
+v2.0.2 - Added aria-labels for input text]]></description>
     <company>Askia</company>
     <author><![CDATA[Jatin Bhatt]]></author>
     <site>www.askia.com</site>
@@ -151,14 +150,6 @@ Format: MM/DD/YYYY]]></description>
           <option value="left" text="Left" />
           <option value="right" text="Right" />
         </options>
-      </property>
-      <property xsi:type="standardProperty" id="datePickerLabelText" name="Date picker text" type="string" require="false" visible="true">
-        <description><![CDATA[]]></description>
-        <value><![CDATA[Choose a date]]></value>
-      </property>
-      <property xsi:type="standardProperty" id="showDatePickerText" name="Show date picker text" type="boolean" require="false" visible="true">
-        <description><![CDATA[]]></description>
-        <value><![CDATA[false]]></value>
       </property>
     </category>
   </properties>
