@@ -19,13 +19,13 @@ v2.0.2 - Added aria-labels for input text]]></description>
       <category>General</category>
     </categories>
     <constraints>
-      <constraint on="questions" single="false" multiple="false" numeric="false" date="true" open="false" chapter="false" requireParentLoop="false" RequireLoopDepth="0" />
+      <constraint on="questions" single="false" multiple="false" numeric="false" date="true" open="false" chapter="false" requireParentLoop="false" requireLoopDepth="0" />
       <constraint on="controls" responseblock="false" checkbox="false" label="false" listbox="false" radiobutton="false" textbox="true" />
       <constraint on="responses" max="*" min="*" />
     </constraints>
   </info>
   <outputs defaultOutput="default">
-    <output id="default" ManageLoopDepth="0">
+    <output id="default" manageLoopDepth="0">
       <description><![CDATA[Default output]]></description>
       <content fileName="moment.min.js" type="javascript" mode="static" position="head" />
       <content fileName="pikaday.js" type="javascript" mode="static" position="head" />
