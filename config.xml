@@ -7,7 +7,7 @@
   <info>
     <name>DatePicker</name>
     <guid>b6c04b51-32c5-4591-ba77-a500d686e5e3</guid>
-    <version>3.0.0</version>
+    <version>3.0.1</version>
     <date>2016-10-28</date>
     <description><![CDATA[V2.0.0 : English only version of the datepicker
 v2.0.2 - Added aria-labels for input text]]></description>
@@ -19,13 +19,13 @@ v2.0.2 - Added aria-labels for input text]]></description>
       <category>General</category>
     </categories>
     <constraints>
-      <constraint on="questions" single="false" multiple="false" numeric="false" date="true" open="false" chapter="false" requireParentLoop="false" requireLoopDepth="0" />
-      <constraint on="controls" responseblock="false" checkbox="false" label="false" listbox="false" radiobutton="false" textbox="true" />
+      <constraint on="questions" single="false" multiple="false" numeric="false" date="true" open="false" chapter="false" requireParentLoop="false" requireLoopDepth="false" />
+      <constraint on="controls" responseblock="true" checkbox="false" label="false" listbox="false" radiobutton="false" textbox="true" />
       <constraint on="responses" max="*" min="*" />
     </constraints>
   </info>
   <outputs defaultOutput="default">
-    <output id="default" manageLoopDepth="0">
+    <output id="default">
       <description><![CDATA[Default output]]></description>
       <content fileName="moment.min.js" type="javascript" mode="static" position="head" />
       <content fileName="pikaday.js" type="javascript" mode="static" position="head" />
