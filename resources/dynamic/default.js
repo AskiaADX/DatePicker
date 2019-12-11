@@ -44,10 +44,10 @@ if (xmaxBound == '0' || xmaxBound.length == 0) {
 }
 
 
-//var xdateFormat = '{%= Interview.Language.DateFormat.ToUpperCase() %}';
-//if (xdateFormat.length == 0) {
+var xdateFormat = '{%= Interview.Language.DateFormat.ToUpperCase() %}';
+if (xdateFormat.length == 0) {
     var xdateFormat = "YYYY-MM-DD";
-//}
+}
 
 
 // Prototype the indexOf function
