@@ -33,7 +33,7 @@
     /**
      * feature detection and helper functions
      */
-    
+
     var hasMoment = typeof moment === 'function',
 
     hasEventListeners = !!window.addEventListener,
@@ -768,7 +768,11 @@
             this.gotoDate(this._d);
 
             if (this._o.field) {
-                this._o.field.value = this.toString();
+                let dateStr = this.toString();
+                if (dateStr.slice(-1) == '.') {
+                    dateStr = dateStr.slice(0, dateStr.length - 1);
+                }
+                this._o.field.value = dateStr;
                 fireEvent(this._o.field, 'change', { firedBy: this });
             }
             if (!preventOnSelect && typeof this._o.onSelect === 'function') {
