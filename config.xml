@@ -8,7 +8,7 @@
     <name>DatePicker</name>
     <guid>b6c04b51-32c5-4591-ba77-a500d686e5e3</guid>
     <version>3.0.4</version>
-    <date>2022-07-26</date>
+    <date>2022-08-08</date>
     <description><![CDATA[
       v2.0.0 : English only version of the datepicker
         v2.0.2 - Added aria-labels for input text
