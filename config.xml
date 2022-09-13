@@ -7,13 +7,14 @@
   <info>
     <name>DatePicker</name>
     <guid>b6c04b51-32c5-4591-ba77-a500d686e5e3</guid>
-    <version>3.0.4</version>
-    <date>2022-08-08</date>
+    <version>3.0.5</version>
+    <date>2022-09-13</date>
     <description><![CDATA[
       v2.0.0 : English only version of the datepicker
         v2.0.2 - Added aria-labels for input text
         v3.0.3 - Date format issue
         v3.0.4 - moment.js upgrade
+        v3.0.5 - pikaday update
     ]]></description>
     <company>Askia</company>
     <author><![CDATA[Jatin Bhatt]]></author>
