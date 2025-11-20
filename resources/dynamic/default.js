@@ -2,7 +2,9 @@
 dim inputNameX = CurrentQuestion.InputName("date")
 
 dim defaultDate = CurrentADC.PropValue("defaultDate").ToString()
-dim useScript = CurrentADC.PropValue("useScript")
+dim useScript = CurrentADC.PropValue("useScript").ToNumber()
+dim minScript = CurrentADC.PropValue("minScript")
+dim maxScript = CurrentADC.PropValue("maxScript")
 dim bound = CurrentADC.PropValue("bound")
 dim position = "'"+CurrentADC.PropValue("position").ToString()+"'"
 dim setDefaultDate = CurrentADC.PropValue("setDefaultDate")
@@ -28,10 +30,10 @@ if CvDkNa(maxBound) < 1 Then
     maxBound = 2100
 EndIf
 
-if (useScript) = "1" Then
-    minDate = CurrentADC.PropValue("minScript").Format("yyyy-MM-dd")
-    maxDate = CurrentADC.PropValue("maxScript").Format("yyyy-MM-dd")
-    elseif (useScript) = "0" Then
+if (useScript) = 1 Then
+    minDate = minScript.ToString()
+    maxDate = maxScript.ToString()
+    else
         minDate = CurrentQuestion.MinDate.Format("yyyy-MM-dd")
         maxDate = CurrentQuestion.MaxDate.Format("yyyy-MM-dd")
 EndIf
