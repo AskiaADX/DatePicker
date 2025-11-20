@@ -74,6 +74,14 @@
 Format: MM/DD/YYYY]]></description>
         <value></value>
       </property>
+      <property xsi:type="standardProperty" id="useScript" name="Askiascript for Min/Max" type="string" mode="dynamic" require="false" visible="true">
+        <description><![CDATA[Use Askiascript to set the Min & Max dates in the control.]]></description>
+        <value><![CDATA[0]]></value>
+        <options>
+          <option value="1" text="Yes" />
+          <option value="0" text="No" />
+        </options>
+      </property>
       <property xsi:type="standardProperty" id="minScript" name="Min Date" type="string" mode="dynamic" require="false" visible="true">
         <description><![CDATA[0]]></description>
         <value></value>

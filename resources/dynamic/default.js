@@ -2,6 +2,7 @@
 dim inputNameX = CurrentQuestion.InputName("date")
 
 dim defaultDate = CurrentADC.PropValue("defaultDate").ToString()
+dim useScript = CurrentADC.PropValue("useScript")
 dim bound = CurrentADC.PropValue("bound")
 dim position = "'"+CurrentADC.PropValue("position").ToString()+"'"
 dim setDefaultDate = CurrentADC.PropValue("setDefaultDate")
@@ -12,8 +13,9 @@ dim showWeekNumber = CurrentADC.PropValue("showWeekNumber")
 dim showMonthAfterYear = CurrentADC.PropValue("showMonthAfterYear")
 dim numberOfMonths = CurrentADC.PropValue("numberOfMonths")
 dim mainCalendar = "'"+CurrentADC.PropValue("mainCalendar")+"'"
-dim minDate = CurrentQuestion.MinDate.Format("yyyy-MM-dd")
-dim maxDate = CurrentQuestion.MaxDate.Format("yyyy-MM-dd")
+
+dim minDate 
+dim maxDate 
 
 dim minBound = CurrentQuestion.MinDate.Format("yyyy").ToNumber()
 dim maxBound = CurrentQuestion.MaxDate.Format("yyyy").ToNumber()
@@ -24,6 +26,14 @@ EndIf
 
 if CvDkNa(maxBound) < 1 Then
     maxBound = 2100
+EndIf
+
+if (useScript) = "1" Then
+    minDate = CurrentADC.PropValue("minScript").Format("yyyy-MM-dd")
+    maxDate = CurrentADC.PropValue("maxScript").Format("yyyy-MM-dd")
+    elseif (useScript) = "0" Then
+        minDate = CurrentQuestion.MinDate.Format("yyyy-MM-dd")
+        maxDate = CurrentQuestion.MaxDate.Format("yyyy-MM-dd")
 EndIf
 %}
 
