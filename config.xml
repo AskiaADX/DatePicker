@@ -7,15 +7,9 @@
   <info>
     <name>DatePicker</name>
     <guid>b6c04b51-32c5-4591-ba77-a500d686e5e3</guid>
-    <version>3.0.5</version>
+    <version>3.0.6</version>
     <date>2022-09-13</date>
-    <description><![CDATA[
-      v2.0.0 : English only version of the datepicker
-        v2.0.2 - Added aria-labels for input text
-        v3.0.3 - Date format issue
-        v3.0.4 - moment.js upgrade
-        v3.0.5 - pikaday update
-    ]]></description>
+    <description><![CDATA[]]></description>
     <company>Askia</company>
     <author><![CDATA[Jatin Bhatt]]></author>
     <site>www.askia.com</site>
@@ -78,6 +72,22 @@
       <property xsi:type="standardProperty" id="defaultDate" name="Default date" type="string" mode="dynamic" require="false" visible="true">
         <description><![CDATA[The initial date to view when first opened
 Format: MM/DD/YYYY]]></description>
+        <value></value>
+      </property>
+      <property xsi:type="standardProperty" id="useScript" name="Askiascript for Min/Max" type="string" mode="dynamic" require="false" visible="true">
+        <description><![CDATA[Use Askiascript to set the Min  Max dates in the control.]]></description>
+        <value><![CDATA[0]]></value>
+        <options>
+          <option value="1" text="Yes" />
+          <option value="0" text="No" />
+        </options>
+      </property>
+      <property xsi:type="standardProperty" id="minScript" name="Min Date" type="string" mode="dynamic" require="false" visible="true">
+        <description><![CDATA[0]]></description>
+        <value></value>
+      </property>
+      <property xsi:type="standardProperty" id="maxScript" name="Max Date" type="string" mode="dynamic" require="false" visible="true">
+        <description><![CDATA[0]]></description>
         <value></value>
       </property>
       <property xsi:type="standardProperty" id="bound" name="Show datepicker" type="string" mode="dynamic" require="false" visible="true">
