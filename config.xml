@@ -75,7 +75,8 @@ Format: MM/DD/YYYY]]></description>
         <value></value>
       </property>
       <property xsi:type="standardProperty" id="useScript" name="Askiascript for Min/Max" type="string" mode="dynamic" require="false" visible="true">
-        <description><![CDATA[Use Askiascript to set the Min  Max dates in the control.]]></description>
+        <description><![CDATA[Use Askiascript to set the Min Max dates. Syntax must resolve into a string in order for the control to accept it's value. 
+        Examples: 10/10/2010 -> Hard coded value !!q1.Value.Format("MM/dd/yyyy")!! -> From previous question !!Now.Format("MM/dd/yyyy")!!  -> Today !!(Now-3).Format("MM/dd/yyyy")!! -> Today minus 3 days]]></description>
         <value><![CDATA[0]]></value>
         <options>
           <option value="1" text="Yes" />
